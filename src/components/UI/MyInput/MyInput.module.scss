@@ -1,0 +1,14 @@
+@import '../../../variables.scss';
+
+.input {
+  padding: 10px;
+
+  border-radius: 7px;
+}
+
+.primary {
+  background-color: $primary-color;
+}
+.secondary {
+  background-color: $secondary-color;
+}

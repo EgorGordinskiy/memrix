@@ -1,0 +1,55 @@
+@import '../../variables.scss';
+
+.burgerMenu {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  transform: translateX(-130%);
+  z-index: 999999;
+
+  &.active {
+    transform: translateX(0);
+  }
+
+  transition: all 0.3s;
+}
+
+.blur {
+  width: 100vw;
+  height: 100vh;
+  left: 25%;
+  backdrop-filter: blur(1px);
+  position: absolute;
+}
+
+.content {
+  cursor: auto;
+  width: 25%;
+  height: 100%;
+  padding: 30px 20px;
+  background-color: #fafafa;
+  border: 1px solid #f2eadf;
+  transition: all 0.4s;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+
+  ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 3px;
+  }
+
+  .links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+}

@@ -1,0 +1,25 @@
+@import '../../variables.scss';
+
+.educationalBlockCard {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 270px;
+  height: 130px;
+  background: linear-gradient(130.38deg, $secondary-color 50%, $primary-color 50%);
+  cursor: pointer;
+  color: $text-primary-color;
+  box-shadow: 0px 0px 7px $shadow-color;
+  border-radius: 7px;
+  transition: all 0.3s;
+
+  .name {
+    font-size: 19px;
+    font-weight: 400;
+  }
+
+  &:hover {
+    box-shadow: 7px 7px 7px $shadow-color;
+  }
+}

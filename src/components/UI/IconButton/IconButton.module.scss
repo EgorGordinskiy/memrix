@@ -1,0 +1,37 @@
+@import '../../../variables.scss';
+
+.iconButton {
+  padding: 10px;
+  // width: 100%;
+  border-radius: 50%;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease-in-out;
+  color: $text-primary-color;
+
+  &:disabled {
+    opacity: 60%;
+    cursor: default;
+  }
+}
+
+// .primary {
+//     background-color: $background-accent-color;
+
+//     &:hover {
+//         background-color: $control-background-secondary-hover;
+//     }
+// }
+.secondary {
+  background-color: $primary-color;
+  box-shadow: 5px 5px 5px $shadow-color;
+
+  &:hover {
+    background-color: $secondary-color;
+  }
+  &:disabled:hover {
+    background-color: $primary-color;
+  }
+}

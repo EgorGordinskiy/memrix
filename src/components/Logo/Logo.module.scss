@@ -1,0 +1,11 @@
+@import '../../variables.scss';
+
+.logo {
+  //   padding: 10px;
+  //   background-color: $primary-color;
+  //   box-shadow: 5px 5px 5px $shadow-color;
+  //   border-radius: 7px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}

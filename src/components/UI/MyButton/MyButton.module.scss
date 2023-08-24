@@ -1,0 +1,14 @@
+@import '../../../variables.scss';
+
+.button {
+  padding: 10px;
+  border-radius: 7px;
+}
+
+.primary {
+  background-color: $secondary-color;
+}
+.secondary {
+  background-color: $link-color;
+  color: $text-secondary-color;
+}

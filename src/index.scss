@@ -1,0 +1,58 @@
+@import './variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  color: $text-primary-color;
+  background-color: $bg-color;
+}
+
+section {
+  padding-top: 25px;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+li,
+a {
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+}
+
+input {
+  border: none;
+  background-color: transparent;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  outline: none;
+}
+
+.active {
+  background-color: $link-hover-color;
+  color: $link-color;
+  border: 2px solid $link-color;
+}
