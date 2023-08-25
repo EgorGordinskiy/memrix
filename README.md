@@ -24,6 +24,10 @@ The application is being developed using the following technologies:
 - Various testing modes to assess knowledge of foreign words.
 - Using pre-existing flashcard sets created by other users.
 
+## Demo
+
+Check out the [Memrix demo](https://memrix.vercel.app/#/) to see the application in action!
+
 ## Contributing
 
 If you'd like to contribute to the development of **Memrix**, please take a look at the current tasks and issues in the repository. You're also welcome to suggest your own ideas and features by opening a new issue.
