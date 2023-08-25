@@ -7,16 +7,24 @@
   flex-direction: column;
   gap: 10px;
   align-items: stretch;
-  //   background-color: $primary-color;
-  border-radius: 7px;
   border: 5px solid $primary-color;
-  box-shadow: 7px 7px 7px $shadow-color;
+  box-shadow: 0px 0px 9px $shadow-color;
+  border-radius: 7px;
 
   .top {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 12px;
-    border-bottom: 2px solid $bg-color;
+  }
+  .number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: $primary-color;
+    box-shadow: 5px 5px 5px $shadow-color;
   }
 }

@@ -12,7 +12,7 @@ export const CreateWordItem: FC<CreateWordItemProps> = ({ number }) => {
   return (
     <div className={classes.item}>
       <div className={classes.top}>
-        <span>{number}</span>
+        <span className={classes.number}>{number}</span>
         <IconButton variant="secondary" icon={<AiOutlineDelete size={25} />} />
       </div>
       <MyInput placeholder="term" />

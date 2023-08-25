@@ -3,12 +3,15 @@
 .button {
   padding: 10px;
   border-radius: 7px;
+  transition: all 0.3s;
 }
 
 .primary {
   background-color: $secondary-color;
 }
 .secondary {
-  background-color: $link-color;
-  color: $text-secondary-color;
+  background-color: $primary-color;
+  box-shadow: 7px 7px 7px $shadow-color;
+  &:hover {
+  }
 }

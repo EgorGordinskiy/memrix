@@ -13,15 +13,16 @@ interface CreateEducationalBlockFormProps {
 export const CreateEducationalBlockForm: FC<CreateEducationalBlockFormProps> = () => {
   return (
     <form className={classes.form}>
-      <div className={classes.top}>
+      <div className={classes.panel}>
         <h2 className={classes.title}>Creating a new set of cards</h2>
-        <MyInput variant="secondary" placeholder="name" />
-        <MyButton>Create</MyButton>
+        <MyInput placeholder="name" />
+        <MyButton variant="secondary">Add a cart</MyButton>
+        <MyButton variant="secondary">Create</MyButton>
       </div>
-      <div className={classes.words}>
-        <CreateWordItem number={1} />
-        <div className={classes.btn}>
-          <IconButton variant="secondary" icon={<AiOutlinePlus size={25} />} />
+      <div className={classes.content}>
+        <div className={classes.words}>
+          <CreateWordItem number={1} />
+          <CreateWordItem number={2} />
         </div>
       </div>
     </form>

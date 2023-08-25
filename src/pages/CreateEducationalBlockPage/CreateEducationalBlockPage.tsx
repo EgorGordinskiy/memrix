@@ -6,9 +6,7 @@ import { CreateEducationalBlockForm } from '../../components/CreateEducationalBl
 export const CreateEducationalBlockPage: FC = () => {
   return (
     <section className={classes.createEducationalBlockPage}>
-      <Container maxWidth={1000}>
-        <CreateEducationalBlockForm />
-      </Container>
+      <CreateEducationalBlockForm />
     </section>
   );
 };
