@@ -5,6 +5,8 @@ import classes from './BurgerMenu.module.scss';
 import { type INavigationItem } from '../../models/navigation-item.model';
 import { NavItem } from '../NavItem';
 import { AiFillCloseCircle, AiFillGithub, AiOutlineCloseCircle } from 'react-icons/ai';
+import { IoMdClose } from 'react-icons/io';
+import { IconButton } from '../UI/IconButton';
 
 interface BurgerMenuProps {
   items: INavigationItem[];
@@ -20,6 +22,9 @@ export const BurgerMenu: FC<BurgerMenuProps> = ({ items, active, setActive }) =>
       onClick={() => setActive(false)}>
       <div className={classes.blur}></div>
       <div className={classes.content} onClick={(e) => e.stopPropagation()}>
+        <div className={classes.close}>
+          <IconButton onClick={handlerClick} variant="secondary" icon={<IoMdClose />} />
+        </div>
         <ul>
           {items.map((item) => (
             <li key={item.id} onClick={handlerClick}>

@@ -7,7 +7,7 @@
   cursor: pointer;
   top: 0;
   left: 0;
-  transform: translateX(-130%);
+  transform: translateX(-140%);
   z-index: 999999;
 
   &.active {
@@ -20,16 +20,24 @@
 .blur {
   width: 100vw;
   height: 100vh;
-  left: 25%;
+  left: 35%;
   backdrop-filter: blur(1px);
   position: absolute;
+
+  @media (max-width: 768px) {
+    left: 0;
+    width: 0;
+    height: 0;
+    backdrop-filter: blur(0px);
+  }
 }
 
 .content {
   cursor: auto;
-  width: 25%;
+  width: 35%;
   height: 100%;
   padding: 30px 20px;
+  padding-top: 70px;
   background-color: #fafafa;
   border: 1px solid #f2eadf;
   transition: all 0.4s;
@@ -37,6 +45,20 @@
   flex-direction: column;
   align-items: stretch;
   justify-content: space-between;
+  position: relative;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 100vh;
+    // padding: 20px;
+    border: none;
+  }
+
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
 
   ul {
     width: 100%;

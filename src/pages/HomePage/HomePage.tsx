@@ -6,6 +6,7 @@ import { EducationalBlockList } from '../../components/EducationalBlockList';
 import { Loader } from '../../components/Loader';
 import { EducationalBlockCard } from '../../components/EducationalBlockCard';
 import { Wrapper } from '../../components/Wrapper';
+import { useOutletContext } from 'react-router';
 
 export const HomePage: FC = () => {
   const { isLoading, data, isSuccess, isError } = useGetAllEducationalBlocksQuery();
@@ -18,6 +19,7 @@ export const HomePage: FC = () => {
       clickable: true
     }
   };
+
   return (
     <section className={classes.homePage}>
       <Container>
@@ -25,7 +27,6 @@ export const HomePage: FC = () => {
         {isLoading && <Loader />}
         {isSuccess && (
           <Wrapper direction="column" gap={25}>
-            <h3>Last added sets of cards</h3>
             <EducationalBlockList educationalBlocks={data} />
           </Wrapper>
         )}

@@ -12,12 +12,12 @@ export const CreateWordItem: FC<CreateWordItemProps> = ({ number }) => {
   return (
     <div className={classes.item}>
       <div className={classes.top}>
-        <span className={classes.number}>{number}</span>
-        <IconButton variant="secondary" icon={<AiOutlineDelete size={25} />} />
+        <span className={classes.number}>{number}.</span>
+        <IconButton icon={<AiOutlineDelete size={25} />} />
       </div>
-      <MyInput placeholder="term" />
-      <MyInput placeholder="translation" />
-      <MyInput placeholder="transcription" />
+      <MyInput variant="secondary" placeholder="term" />
+      <MyInput variant="secondary" placeholder="translation" />
+      <MyInput variant="secondary" placeholder="transcription" />
     </div>
   );
 };

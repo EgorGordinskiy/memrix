@@ -6,7 +6,7 @@ import { Logo } from '../Logo';
 import { AiFillHeart, AiOutlineHeart, AiOutlinePlus } from 'react-icons/ai';
 import { CgMenuLeft } from 'react-icons/cg';
 import { IconButton } from '../UI/IconButton';
-import { Link } from 'react-router-dom';
+import { Link, useOutletContext } from 'react-router-dom';
 import { SearchBar } from '../SearchBar';
 
 interface HeaderProps {
@@ -26,7 +26,7 @@ export const Header: FC<HeaderProps> = ({ onClickBurgerButton }) => {
             />
             <Logo />
           </Wrapper>
-          <SearchBar />
+          {/* <SearchBar /> */}
           <Link to="/">
             <IconButton variant="secondary" icon={<AiOutlineHeart size={25} />} />
           </Link>
