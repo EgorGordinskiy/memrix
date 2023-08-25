@@ -3,7 +3,9 @@ import { type IEducationalBlock } from '../../models/educational-block.model';
 
 export const educationalBlockApi = createApi({
   reducerPath: 'educationalBlockApi',
-  baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:3000/educational-blocks/' }),
+  baseQuery: fetchBaseQuery({
+    baseUrl: 'https://memrix-test-service.onrender.com/educational-blocks/'
+  }),
   endpoints: (builder) => ({
     getAllEducationalBlocks: builder.query<IEducationalBlock[], void>({
       query: () => ''
