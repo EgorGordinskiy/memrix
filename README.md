@@ -11,6 +11,7 @@ The application is being developed using the following technologies:
 - **React**: The primary frontend framework for building the application's interface.
 - **TypeScript**: A programming language for adding static typing to JavaScript.
 - **Vite**: A fast tool for frontend development.
+- **SCSS**: Used for styling the user interface.
 - **Redux Toolkit**: A library for managing the application state.
 - **JSON Server**: A temporary solution for simulating a server and managing data. (Note: JSON Server is used temporarily; in the future, there are plans to develop a custom server using NestJS.)
 
