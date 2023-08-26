@@ -15,9 +15,8 @@ void i18n
       order: ['cookie', 'localStorage', 'htmlTag', 'path', 'subdomain'],
       caches: ['cookie']
     },
-
-    interpolation: {
-      escapeValue: false
+    backend: {
+      loadPath: '/locales/{{lng}}/translation.json'
     }
   });
 
