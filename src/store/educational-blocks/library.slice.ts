@@ -14,7 +14,7 @@ const librarySlice = createSlice({
   initialState,
   reducers: {
     addEducationalBlock: (state, action: PayloadAction<IEducationalBlock>) => {
-      state.educationalBlock = action.payload;
+      state.educationalBlocks.push(action.payload);
     }
   }
 });
