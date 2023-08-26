@@ -18,6 +18,7 @@ import { IconButton } from '../../components/UI/IconButton';
 import { AnimatePresence, motion } from 'framer-motion';
 import { IoMdAdd } from 'react-icons/io';
 import { MyButton } from '../../components/UI/MyButton';
+import { useTranslation } from 'react-i18next';
 
 export const EducationalBlockPage: FC = () => {
   const { id } = useParams();
@@ -58,6 +59,7 @@ export const EducationalBlockPage: FC = () => {
     }
   };
 
+  const { t } = useTranslation();
   return (
     <section className={classes.educationalBlockPage}>
       <Container>
@@ -90,8 +92,8 @@ export const EducationalBlockPage: FC = () => {
                     <div className={classes.panel}>
                       <div className={classes.modes}>
                         <Wrapper align="center" gap={10}>
-                          <MyButton variant="secondary">Learning</MyButton>
-                          <MyButton variant="secondary">Testing</MyButton>
+                          <MyButton variant="secondary">{t('flashcard_learning')}</MyButton>
+                          <MyButton variant="secondary">{t('flashcard_testing')}</MyButton>
                         </Wrapper>
                       </div>
                       <div className={classes.control}>

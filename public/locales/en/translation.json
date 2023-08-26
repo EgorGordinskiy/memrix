@@ -3,5 +3,7 @@
   "link_library": "Your library",
   "link_flashcards": "Sets of flashcards",
   "link_create": "Сreate a set of flashcards",
-  "compliment": "You're super!"
+  "compliment": "You're super!",
+  "flashcard_learning": "Learning",
+  "flashcard_testing": "Testing"
 }

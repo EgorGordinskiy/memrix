@@ -1,8 +1,7 @@
-/* eslint-disable @typescript-eslint/no-misused-promises */
-import React, { useState } from 'react';
-import classes from './LanguageSwitcher.module.scss';
 import { changeLanguage } from 'i18next';
 import cookies from 'js-cookie';
+import React, { useState } from 'react';
+import classes from './LanguageSwitcher.module.scss';
 
 interface LanguageSwitcherProps {
   languages: string[];
@@ -13,30 +12,28 @@ export const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ languages })
   const [selectedLanguage, setSelectedLanguage] = useState<string>(currentLanguageCode);
   const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
 
-  const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
-  };
-
   const selectLanguage = (language: string) => {
     setSelectedLanguage(language);
-    toggleDropdown();
+    setIsDropdownOpen(false);
   };
 
   const handleSelectLanguage = (language: string) => {
     selectLanguage(language);
-    // eslint-disable-next-line @typescript-eslint/no-floating-promises
-    changeLanguage(language);
+    void changeLanguage(language);
   };
 
   return (
-    <div className={classes.languageSwitcher}>
+    <div
+      className={classes.languageSwitcher}
+      onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+      onMouseEnter={() => setIsDropdownOpen(true)}
+      onMouseLeave={() => setIsDropdownOpen(false)}>
       <div
         className={
           isDropdownOpen
             ? [classes.selectedLanguage, classes.activeSelected].join(' ')
             : classes.selectedLanguage
-        }
-        onClick={toggleDropdown}>
+        }>
         {selectedLanguage}
       </div>
 

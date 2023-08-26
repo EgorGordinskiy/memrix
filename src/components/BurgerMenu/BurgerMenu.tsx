@@ -14,6 +14,7 @@ import { IoMdClose } from 'react-icons/io';
 import { IconButton } from '../UI/IconButton';
 import { LanguageSwitcher } from '../LanguageSwitcher';
 import { useTranslation } from 'react-i18next';
+import { PiSmileyThin } from 'react-icons/pi';
 
 interface BurgerMenuProps {
   items: INavigationItem[];
@@ -42,7 +43,7 @@ export const BurgerMenu: FC<BurgerMenuProps> = ({ items, active, setActive }) =>
         </ul>
         <div className={classes.links}>
           <span>{t('compliment')}</span>
-          <AiOutlineSmile size={35} />
+          <PiSmileyThin size={35} />
         </div>
       </div>
     </div>

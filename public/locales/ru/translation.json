@@ -3,5 +3,7 @@
   "link_library": "Ваша библиотека",
   "link_flashcards": "Наборы карточек",
   "link_create": "Создать набор карточек",
-  "compliment": "Ты супер!"
+  "compliment": "Ты супер!",
+  "flashcard_learning": "Изучение",
+  "flashcard_testing": "Тестирование"
 }

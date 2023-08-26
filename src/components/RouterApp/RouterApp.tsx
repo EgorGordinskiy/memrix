@@ -1,5 +1,5 @@
 import { type FC } from 'react';
-import { Route, Routes } from 'react-router';
+import { Navigate, Route, Routes } from 'react-router';
 import { HomePage } from '../../pages/HomePage';
 import { Layout } from '../Layout';
 import { EducationalBlockPage } from '../../pages/EducationalBlockPage';
@@ -14,6 +14,9 @@ export const RouterApp: FC = () => {
         <Route path="/block/:id" element={<EducationalBlockPage />} />
         <Route path="/create" element={<CreateEducationalBlockPage />} />
         <Route path="/library" element={<LibraryPage />} />
+      </Route>
+      <Route path="*">
+        <Navigate to="/" />
       </Route>
     </Routes>
   );
