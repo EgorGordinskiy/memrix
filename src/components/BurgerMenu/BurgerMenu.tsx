@@ -4,9 +4,16 @@ import { type FC } from 'react';
 import classes from './BurgerMenu.module.scss';
 import { type INavigationItem } from '../../models/navigation-item.model';
 import { NavItem } from '../NavItem';
-import { AiFillCloseCircle, AiFillGithub, AiOutlineCloseCircle } from 'react-icons/ai';
+import {
+  AiFillCloseCircle,
+  AiFillGithub,
+  AiOutlineCloseCircle,
+  AiOutlineSmile
+} from 'react-icons/ai';
 import { IoMdClose } from 'react-icons/io';
 import { IconButton } from '../UI/IconButton';
+import { LanguageSwitcher } from '../LanguageSwitcher';
+import { useTranslation } from 'react-i18next';
 
 interface BurgerMenuProps {
   items: INavigationItem[];
@@ -16,6 +23,7 @@ interface BurgerMenuProps {
 
 export const BurgerMenu: FC<BurgerMenuProps> = ({ items, active, setActive }) => {
   const handlerClick = () => setActive(false);
+  const { t } = useTranslation();
   return (
     <div
       className={active ? [classes.burgerMenu, classes.active].join(' ') : classes.burgerMenu}
@@ -33,10 +41,8 @@ export const BurgerMenu: FC<BurgerMenuProps> = ({ items, active, setActive }) =>
           ))}
         </ul>
         <div className={classes.links}>
-          <span>You are super!</span>
-          <a href="https://github.com/Eofre" target="_blank">
-            <AiFillGithub size={35} />
-          </a>
+          <span>{t('compliment')}</span>
+          <AiOutlineSmile size={35} />
         </div>
       </div>
     </div>

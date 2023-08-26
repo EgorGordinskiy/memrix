@@ -1,0 +1,55 @@
+@import '../../variables.scss';
+
+.languageSwitcher {
+  position: relative;
+}
+
+.selectedLanguage {
+  width: 47px;
+  height: 47px;
+  padding: 8px;
+  border-radius: 7px;
+  cursor: pointer;
+  background-color: $primary-color;
+  box-shadow: 5px 5px 5px $shadow-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.languageDropdown {
+  position: absolute;
+  top: 100%;
+  padding: 8px;
+  z-index: 1;
+  transition: all 0.3s;
+  opacity: 0;
+  background-color: rgb(230, 230, 230);
+  box-shadow: 5px 5px 5px $shadow-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 47px;
+  border-radius: 0px 0px 7px 7px;
+
+  .languageOption {
+    padding: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 7px;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: #f0f0f0;
+    }
+  }
+}
+
+.active {
+  opacity: 1;
+}
+.activeSelected {
+  border-radius: 7px 7px 0px 0px;
+}

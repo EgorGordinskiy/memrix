@@ -8,6 +8,9 @@ import { CgMenuLeft } from 'react-icons/cg';
 import { IconButton } from '../UI/IconButton';
 import { Link, useOutletContext } from 'react-router-dom';
 import { SearchBar } from '../SearchBar';
+import { IoMdCreate } from 'react-icons/io';
+import { BiLibrary } from 'react-icons/bi';
+import { LanguageSwitcher } from '../LanguageSwitcher';
 
 interface HeaderProps {
   onClickBurgerButton: () => void;
@@ -22,14 +25,16 @@ export const Header: FC<HeaderProps> = ({ onClickBurgerButton }) => {
             <IconButton
               onClick={onClickBurgerButton}
               variant="secondary"
-              icon={<CgMenuLeft size={25} />}
+              icon={<CgMenuLeft size={23} />}
             />
             <Logo />
           </Wrapper>
-          {/* <SearchBar /> */}
-          <Link to="/">
-            <IconButton variant="secondary" icon={<AiOutlineHeart size={25} />} />
-          </Link>
+          <Wrapper align="center" gap={10}>
+            {/* <Link to="/library">
+              <IconButton variant="secondary" icon={<BiLibrary size={23} />} />
+            </Link> */}
+            <LanguageSwitcher languages={['ru', 'en']} />
+          </Wrapper>
         </Wrapper>
       </Container>
     </header>

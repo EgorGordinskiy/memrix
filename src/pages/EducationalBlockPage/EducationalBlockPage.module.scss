@@ -6,3 +6,21 @@
     gap: 7px;
   }
 }
+
+.panel {
+  position: relative;
+
+  .modes {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .tools {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .control {
+    margin: 0 auto;
+  }
+}

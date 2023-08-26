@@ -7,6 +7,7 @@ import { Loader } from '../../components/Loader';
 import { EducationalBlockCard } from '../../components/EducationalBlockCard';
 import { Wrapper } from '../../components/Wrapper';
 import { useOutletContext } from 'react-router';
+import { SearchBar } from '../../components/SearchBar';
 
 export const HomePage: FC = () => {
   const { isLoading, data, isSuccess, isError } = useGetAllEducationalBlocksQuery();
@@ -26,10 +27,13 @@ export const HomePage: FC = () => {
         {isError && <>Ошибка!</>}
         {isLoading && <Loader />}
         {isSuccess && (
-          <Wrapper direction="column" gap={25}>
+          <Wrapper direction="column" align="flex-start" justify="center" gap={25}>
             <EducationalBlockList educationalBlocks={data} />
           </Wrapper>
         )}
+        {/* <div className={classes.panel}>
+          <SearchBar />
+        </div> */}
       </Container>
     </section>
   );

@@ -1,11 +1,18 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { educationalBlockApi } from './educational-blocks/educational-blocks.api';
-import { educationalBlockCurrentReducer } from './educational-blocks/educational-block-current.slice';
+import { libraryReducer } from './educational-blocks/library.slice';
+import { persistStore, persistReducer } from 'redux-persist';
+import storage from 'redux-persist/lib/storage'; // defaults to localStorage for web
+
+const persistConfig = {
+  key: 'root',
+  storage
+};
 
 const store = configureStore({
   reducer: {
     [educationalBlockApi.reducerPath]: educationalBlockApi.reducer,
-    educationalBlockCurrent: educationalBlockCurrentReducer
+    library: libraryReducer
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(educationalBlockApi.middleware)

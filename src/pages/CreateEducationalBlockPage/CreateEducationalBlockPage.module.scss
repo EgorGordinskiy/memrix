@@ -1,6 +1,10 @@
 @import '../../variables.scss';
 
 .createEducationalBlockPage {
-  max-width: 100%;
-  padding-bottom: 80px;
+  padding-top: 0px;
+  .tools {
+    width: 100%;
+    padding: 5px;
+    // background-color: $secondary-color;
+  }
 }

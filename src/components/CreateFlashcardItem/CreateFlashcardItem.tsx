@@ -1,14 +1,14 @@
 import { type FC } from 'react';
-import classes from './CreateWordItem.module.scss';
+import classes from './CreateFlashcardItem.module.scss';
 import { MyInput } from '../UI/MyInput';
 import { AiOutlineDelete } from 'react-icons/ai';
 import { IconButton } from '../UI/IconButton';
 
-interface CreateWordItemProps {
+interface CreateFlashcardItemProps {
   number: number;
 }
 
-export const CreateWordItem: FC<CreateWordItemProps> = ({ number }) => {
+export const CreateFlashcardItem: FC<CreateFlashcardItemProps> = ({ number }) => {
   return (
     <div className={classes.item}>
       <div className={classes.top}>

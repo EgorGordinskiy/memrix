@@ -16,6 +16,8 @@ import {
 } from 'react-icons/bs';
 import { IconButton } from '../../components/UI/IconButton';
 import { AnimatePresence, motion } from 'framer-motion';
+import { IoMdAdd } from 'react-icons/io';
+import { MyButton } from '../../components/UI/MyButton';
 
 export const EducationalBlockPage: FC = () => {
   const { id } = useParams();
@@ -85,23 +87,36 @@ export const EducationalBlockPage: FC = () => {
                         )}
                       </AnimatePresence>
                     </div>
-                    <Wrapper align="center" justify="center" gap={40}>
-                      <IconButton
-                        variant="secondary"
-                        icon={<BsChevronLeft size={30} />}
-                        onClick={handleClickPrevious}
-                        disabled={indexWord === 0}
-                      />
-                      <div className={classes.progress}>
-                        <span> {indexWord + 1}</span> / <span>{words.length}</span>
+                    <div className={classes.panel}>
+                      <div className={classes.modes}>
+                        <Wrapper align="center" gap={10}>
+                          <MyButton variant="secondary">Learning</MyButton>
+                          <MyButton variant="secondary">Testing</MyButton>
+                        </Wrapper>
                       </div>
-                      <IconButton
-                        variant="secondary"
-                        icon={<BsChevronRight size={30} />}
-                        onClick={handleClickNext}
-                        disabled={indexWord === words.length - 1}
-                      />
-                    </Wrapper>
+                      <div className={classes.control}>
+                        <Wrapper align="center" justify="center" gap={40}>
+                          <IconButton
+                            variant="secondary"
+                            icon={<BsChevronLeft size={30} />}
+                            onClick={handleClickPrevious}
+                            disabled={indexWord === 0}
+                          />
+                          <div className={classes.progress}>
+                            <span> {indexWord + 1}</span> / <span>{words.length}</span>
+                          </div>
+                          <IconButton
+                            variant="secondary"
+                            icon={<BsChevronRight size={30} />}
+                            onClick={handleClickNext}
+                            disabled={indexWord === words.length - 1}
+                          />
+                        </Wrapper>
+                      </div>
+                      <div className={classes.tools}>
+                        <IconButton variant="secondary" icon={<IoMdAdd size={25} />} />
+                      </div>
+                    </div>
                   </Wrapper>
                 </div>
               </div>

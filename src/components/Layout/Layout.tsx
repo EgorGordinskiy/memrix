@@ -5,12 +5,16 @@ import { BurgerMenu } from '../BurgerMenu';
 import { type INavigationItem } from '../../models/navigation-item.model';
 import { IoMdCreate } from 'react-icons/io';
 import { PiCardsFill } from 'react-icons/pi';
+import { BiLibrary } from 'react-icons/bi';
+import { useTranslation } from 'react-i18next';
 
 export const Layout: FC = () => {
   const [isBurgerMenu, setIsBurgerMenu] = useState(false);
+  const { t } = useTranslation();
   const navList: INavigationItem[] = [
-    { id: 0, name: 'Sets of flashcards', path: '/', icon: <PiCardsFill size={25} /> },
-    { id: 1, name: 'Сreate a set of flashcards', path: '/create', icon: <IoMdCreate size={25} /> }
+    { id: 2, name: t('link_library'), path: '/library', icon: <BiLibrary size={25} /> },
+    { id: 0, name: t('link_flashcards'), path: '/', icon: <PiCardsFill size={25} /> },
+    { id: 1, name: t('link_create'), path: '/create', icon: <IoMdCreate size={25} /> }
   ];
   const handleClickBurgerButton = () => setIsBurgerMenu(!isBurgerMenu);
   const [name, setName] = useState('Egor');
