@@ -15,9 +15,6 @@ export const RouterApp: FC = () => {
         <Route path="/create" element={<CreateEducationalBlockPage />} />
         <Route path="/library" element={<LibraryPage />} />
       </Route>
-      <Route path="*">
-        <Navigate to="/" />
-      </Route>
     </Routes>
   );
 };
