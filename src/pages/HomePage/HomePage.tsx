@@ -26,14 +26,7 @@ export const HomePage: FC = () => {
       <Container>
         {isError && <>Ошибка!</>}
         {isLoading && <Loader />}
-        {isSuccess && (
-          <Wrapper direction="column" align="flex-start" justify="center" gap={25}>
-            <EducationalBlockList educationalBlocks={data} />
-          </Wrapper>
-        )}
-        {/* <div className={classes.panel}>
-          <SearchBar />
-        </div> */}
+        {isSuccess && <EducationalBlockList educationalBlocks={data} />}
       </Container>
     </section>
   );

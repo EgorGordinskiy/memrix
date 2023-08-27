@@ -1,4 +1,12 @@
 @import '../../variables.scss';
 
-.modePanel {
+.panel {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 475px) {
+  .panel {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }

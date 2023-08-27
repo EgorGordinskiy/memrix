@@ -12,9 +12,9 @@ export const WordItem: FC<WordItemProps> = ({ word }) => {
   return (
     <div className={classes.wordItem}>
       <div className={classes.word}>
-        <span className={classes.term}>{word.term}</span>
-        <span className={classes.transcription}>{word.transcription}</span>
-        <span className={classes.translation}>- {word.translation}</span>
+        <div className={classes.term}>{word.term}</div>
+        <div className={classes.transcription}>{word.transcription}</div>
+        <div className={classes.translation}> {word.translation}</div>
       </div>
       <IconButton icon={<AiOutlineSound size={20} />} />
     </div>

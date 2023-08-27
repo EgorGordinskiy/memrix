@@ -4,6 +4,8 @@
   "link_flashcards": "Наборы карточек",
   "link_create": "Создать набор карточек",
   "compliment": "Ты супер!",
-  "flashcard_learning": "Изучение",
-  "flashcard_testing": "Тестирование"
+  "ed-block_learning": "Изучение",
+  "ed-block_testing": "Тестирование",
+  "ed-block_terms": "Термины",
+  "ed-block_flashcards": "Карточки"
 }

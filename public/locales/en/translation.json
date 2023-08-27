@@ -4,6 +4,8 @@
   "link_flashcards": "Sets of flashcards",
   "link_create": "Сreate a set of flashcards",
   "compliment": "You're super!",
-  "flashcard_learning": "Learning",
-  "flashcard_testing": "Testing"
+  "ed-block_learning": "Learning",
+  "ed-block_testing": "Testing",
+  "ed-block_terms": "Terms",
+  "ed-block_flashcards": "Flashcards"
 }

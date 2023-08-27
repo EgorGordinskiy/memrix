@@ -13,12 +13,41 @@
     display: flex;
     align-items: center;
     gap: 10px;
-
+    width: 90%;
+    .term {
+      width: 30%;
+      text-align: left;
+    }
+    .translation {
+      width: 30%;
+      text-align: left;
+    }
     .transcription {
+      width: 30%;
+      text-align: left;
       padding: 5px;
       background-color: $link-hover-color;
       color: $link-color;
       border-radius: 3px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .wordItem {
+    .word {
+      flex-direction: column;
+      align-items: flex-start;
+
+      .term {
+        width: auto;
+      }
+      .translation {
+        width: auto;
+      }
+      .transcription {
+        width: auto;
+      }
     }
   }
 }

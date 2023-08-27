@@ -10,10 +10,10 @@ interface ModePanelProps {
 
 export const ModePanel: FC<ModePanelProps> = ({ modes }) => {
   return (
-    <Wrapper align="center" gap={0}>
+    <ul className={classes.panel}>
       {modes.map((mode) => (
         <ModeLink key={mode.id} item={mode} />
       ))}
-    </Wrapper>
+    </ul>
   );
 };

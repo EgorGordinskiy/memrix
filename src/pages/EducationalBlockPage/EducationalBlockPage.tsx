@@ -18,28 +18,29 @@ export const EducationalBlockPage: FC = () => {
   const { isSuccess, isLoading, isError, data } = useGetEducationalBlockByIdQuery(id);
   const words: IWord[] = isSuccess ? data.words : [];
 
+  const { t } = useTranslation();
+
   const modes: INavigationItem[] = [
     {
       id: 2,
-      name: 'Карточки',
+      name: t('ed-block_flashcards'),
       path: `/block/${id}/flashcards`,
       icon: <PiDogThin size={27} />
     },
     {
       id: 0,
-      name: 'Изучение',
+      name: t('ed-block_learning'),
       path: '/',
       icon: <PiGraduationCapThin size={27} />
     },
     {
       id: 1,
-      name: 'Тестирование',
+      name: t('ed-block_testing'),
       path: '/',
       icon: <PiChatsThin size={27} />
     }
   ];
 
-  const { t } = useTranslation();
   return (
     <section className={classes.educationalBlockPage}>
       <Container maxWidth={800}>

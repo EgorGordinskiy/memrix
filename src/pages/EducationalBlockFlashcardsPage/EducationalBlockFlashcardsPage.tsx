@@ -14,6 +14,7 @@ import { Loader } from '../../components/Loader';
 import { PiChatsThin, PiDogThin, PiGraduationCapThin } from 'react-icons/pi';
 import { type INavigationItem } from '../../models/navigation-item.model';
 import { ModePanel } from '../../components/ModePanel';
+import { useTranslation } from 'react-i18next';
 
 export const EducationalBlockFlashcardsPage: FC = () => {
   const { id } = useParams();
@@ -54,22 +55,24 @@ export const EducationalBlockFlashcardsPage: FC = () => {
     }
   };
 
+  const { t } = useTranslation();
+
   const modes: INavigationItem[] = [
     {
       id: 2,
-      name: 'Термины',
+      name: t('ed-block_terms'),
       path: `/block/${id}`,
       icon: <PiDogThin size={27} />
     },
     {
       id: 0,
-      name: 'Изучение',
+      name: t('ed-block_learning'),
       path: '/',
       icon: <PiGraduationCapThin size={27} />
     },
     {
       id: 1,
-      name: 'Тестирование',
+      name: t('ed-block_testing'),
       path: '/',
       icon: <PiChatsThin size={27} />
     }
@@ -84,7 +87,7 @@ export const EducationalBlockFlashcardsPage: FC = () => {
           <Wrapper direction="column" align="center" gap={14}>
             <ProgressBar value={progressValue} />
             <ModePanel modes={modes} />
-            <div style={{ height: '320px', width: '800px' }}>
+            <div style={{ height: '320px', width: '100%' }}>
               <AnimatePresence>
                 {showCard && (
                   <motion.div

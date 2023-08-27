@@ -1,4 +1,12 @@
 @import '../../variables.scss';
 
 .educationalBlockList {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+
+  @media (max-width: 580px) {
+    flex-direction: column;
+    align-items: center;
+  }
 }

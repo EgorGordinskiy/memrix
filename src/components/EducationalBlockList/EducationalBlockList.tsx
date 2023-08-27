@@ -11,13 +11,11 @@ interface EducationalBlockListProps {
 export const EducationalBlockList: FC<EducationalBlockListProps> = ({ educationalBlocks }) => {
   return (
     <ul className={classes.educationalBlockList}>
-      <Wrapper flexWrap="wrap" gap={10}>
-        {educationalBlocks.map((educationalBlock) => (
-          <li key={educationalBlock.id}>
-            <EducationalBlockCard educationalBlock={educationalBlock} />
-          </li>
-        ))}
-      </Wrapper>
+      {educationalBlocks.map((educationalBlock) => (
+        <li key={educationalBlock.id}>
+          <EducationalBlockCard educationalBlock={educationalBlock} />
+        </li>
+      ))}
     </ul>
   );
 };
