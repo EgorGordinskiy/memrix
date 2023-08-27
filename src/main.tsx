@@ -1,7 +1,7 @@
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import './index.scss';
-import { BrowserRouter, HashRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './store';
 import './i18n';
@@ -11,9 +11,9 @@ import { Loader } from './components/Loader';
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <Suspense fallback={<Loader />}>
     <Provider store={store}>
-      <BrowserRouter>
+      <HashRouter>
         <App />
-      </BrowserRouter>
+      </HashRouter>
     </Provider>
   </Suspense>
 );
