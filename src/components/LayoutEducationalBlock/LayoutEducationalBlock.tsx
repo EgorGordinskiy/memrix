@@ -1,15 +1,15 @@
 import { useState, type FC } from 'react';
-import { Header } from '../Header';
-import { Outlet } from 'react-router';
+import { Outlet, useParams } from 'react-router';
 import { BurgerMenu } from '../BurgerMenu';
 import { type INavigationItem } from '../../models/navigation-item.model';
 import { IoMdCreate } from 'react-icons/io';
 import { PiCardsFill } from 'react-icons/pi';
 import { BiLibrary } from 'react-icons/bi';
 import { useTranslation } from 'react-i18next';
-import { Logo } from '../Logo';
+import { Header } from '../Header';
+import { useGetEducationalBlockByIdQuery } from '../../store/educational-blocks/educational-blocks.api';
 
-export const Layout: FC = () => {
+export const LayoutEducationalBlock: FC = () => {
   const [isBurgerMenu, setIsBurgerMenu] = useState(false);
   const { t } = useTranslation();
   const navList: INavigationItem[] = [
@@ -19,9 +19,15 @@ export const Layout: FC = () => {
   ];
   const handleClickBurgerButton = () => setIsBurgerMenu(!isBurgerMenu);
 
+  const { id } = useParams();
+  const { isSuccess, data } = useGetEducationalBlockByIdQuery(id);
+
   return (
     <>
-      <Header onClickBurgerButton={handleClickBurgerButton} center={<Logo />} />
+      <Header
+        onClickBurgerButton={handleClickBurgerButton}
+        center={isSuccess && <div>{data.name}</div>}
+      />
       <BurgerMenu active={isBurgerMenu} setActive={setIsBurgerMenu} items={navList} />
       <main>
         <Outlet />

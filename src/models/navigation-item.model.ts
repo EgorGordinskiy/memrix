@@ -4,5 +4,5 @@ export interface INavigationItem {
   id: number;
   name: string;
   path: string;
-  icon: ReactNode;
+  icon?: ReactNode;
 }

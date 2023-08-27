@@ -1,0 +1,16 @@
+@import '../../../variables.scss';
+
+.modeLink {
+  color: $text-primary-color;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  transition: all 0.3s;
+  font-size: 16px;
+  border-radius: 7px;
+  padding: 7px 15px;
+
+  &:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.258);
+  }
+}

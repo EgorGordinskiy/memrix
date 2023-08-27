@@ -3,7 +3,7 @@ import { type FC } from 'react';
 
 import classes from './BurgerMenu.module.scss';
 import { type INavigationItem } from '../../models/navigation-item.model';
-import { NavItem } from '../NavItem';
+import { NavItem } from '../UI/NavItem';
 import {
   AiFillCloseCircle,
   AiFillGithub,

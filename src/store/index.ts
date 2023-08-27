@@ -2,7 +2,7 @@ import { configureStore } from '@reduxjs/toolkit';
 import { educationalBlockApi } from './educational-blocks/educational-blocks.api';
 import { libraryReducer } from './educational-blocks/library.slice';
 import { persistStore, persistReducer } from 'redux-persist';
-import storage from 'redux-persist/lib/storage'; // defaults to localStorage for web
+import storage from 'redux-persist/lib/storage';
 
 const persistConfig = {
   key: 'root',

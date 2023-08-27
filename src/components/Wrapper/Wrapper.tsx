@@ -7,6 +7,8 @@ interface WrapperProps {
   justify?: CSSProperties['justifyContent'];
   align?: CSSProperties['alignItems'];
   flexWrap?: CSSProperties['flexWrap'];
+  width?: CSSProperties['width'];
+  height?: CSSProperties['height'];
   children: ReactNode;
 }
 
@@ -16,11 +18,15 @@ export const Wrapper: FC<WrapperProps> = ({
   justify = 'flex-start',
   align = 'stretch',
   flexWrap = 'nowrap',
+  height,
+  width,
   children
 }) => {
   const wrapperStyles = {
     flexDirection: direction,
     gap,
+    width,
+    height,
     justifyContent: justify,
     alignItems: align,
     flexWrap
