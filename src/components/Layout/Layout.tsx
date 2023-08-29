@@ -13,7 +13,7 @@ export const Layout: FC = () => {
   const [isBurgerMenu, setIsBurgerMenu] = useState(false);
   const { t } = useTranslation();
   const navList: INavigationItem[] = [
-    { id: 2, name: t('link_library'), path: '/library', icon: <BiLibrary size={25} /> },
+    // { id: 2, name: t('link_library'), path: '/library', icon: <BiLibrary size={25} /> },
     { id: 0, name: t('link_flashcards'), path: '/', icon: <PiCardsFill size={25} /> },
     { id: 1, name: t('link_create'), path: '/create', icon: <IoMdCreate size={25} /> }
   ];

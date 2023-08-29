@@ -7,6 +7,7 @@ import { CreateEducationalBlockPage } from '../../pages/CreateEducationalBlockPa
 import { LibraryPage } from '../../pages/LibraryPage';
 import { EducationalBlockFlashcardsPage } from '../../pages/EducationalBlockFlashcardsPage';
 import { LayoutEducationalBlock } from '../LayoutEducationalBlock';
+import { LearningEducationalBlockPage } from '../../pages/LearningEducationalBlockPage';
 
 export const RouterApp: FC = () => {
   return (
@@ -19,6 +20,7 @@ export const RouterApp: FC = () => {
       <Route path="/block/:id" element={<LayoutEducationalBlock />}>
         <Route path="/block/:id" element={<EducationalBlockPage />} />
         <Route path="/block/:id/flashcards" element={<EducationalBlockFlashcardsPage />} />
+        <Route path="/block/:id/learning" element={<LearningEducationalBlockPage />} />
       </Route>
     </Routes>
   );

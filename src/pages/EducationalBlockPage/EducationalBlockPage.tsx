@@ -30,7 +30,7 @@ export const EducationalBlockPage: FC = () => {
     {
       id: 0,
       name: t('ed-block_learning'),
-      path: '/',
+      path: `/block/${id}/learning`,
       icon: <PiGraduationCapThin size={27} />
     },
     {

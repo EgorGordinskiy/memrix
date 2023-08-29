@@ -1,13 +1,14 @@
 @import '../../../variables.scss';
 
 .input {
-  padding: 10px;
-
+  padding: 15px 20px;
+  box-shadow: 0px 0px 5px $shadow-color;
   border-radius: 7px;
 }
 
 .primary {
-  background-color: $primary-color;
+  outline: 2px solid $secondary-color;
+  // background-color: $bg-primary-color;
 }
 .secondary {
   background-color: $bg-primary-color;
