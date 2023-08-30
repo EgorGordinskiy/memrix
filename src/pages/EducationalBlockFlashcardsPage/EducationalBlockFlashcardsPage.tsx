@@ -82,7 +82,11 @@ export const EducationalBlockFlashcardsPage: FC = () => {
     <section className={classes.educationalBlockFlashcardsPage}>
       <Container maxWidth={880}>
         {isError && <>Error</>}
-        {isLoading && <Loader />}
+        {isLoading && (
+          <Wrapper height="70vh" align="center" justify="center">
+            <Loader />
+          </Wrapper>
+        )}
         {isSuccess && (
           <Wrapper direction="column" align="center" gap={14}>
             <ProgressBar value={progressValue} />

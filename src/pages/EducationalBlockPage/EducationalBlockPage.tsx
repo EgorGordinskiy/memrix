@@ -44,16 +44,18 @@ export const EducationalBlockPage: FC = () => {
   return (
     <section className={classes.educationalBlockPage}>
       <Container maxWidth={800}>
-        <Wrapper align="center" justify="center">
-          {isLoading && <Loader />}
-          {isError && <>Ошибка!</>}
-          {isSuccess && (
-            <Wrapper width="100%" direction="column" align="center" gap={20}>
-              <ModePanel modes={modes} />
-              {words && <WordList words={words} />}
-            </Wrapper>
-          )}
-        </Wrapper>
+        {isLoading && (
+          <Wrapper height="70vh" align="center" justify="center">
+            <Loader />
+          </Wrapper>
+        )}
+        {isError && <>Ошибка!</>}
+        {isSuccess && (
+          <Wrapper width="100%" direction="column" align="center" gap={20}>
+            <ModePanel modes={modes} />
+            {words && <WordList words={words} />}
+          </Wrapper>
+        )}
       </Container>
     </section>
   );

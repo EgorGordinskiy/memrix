@@ -8,6 +8,7 @@ import { MyButton } from '../../components/UI/MyButton';
 import { type IWord } from '../../models/word.model';
 import { LearningProcess } from '../../components/LearningProcess';
 import { Loader } from '../../components/Loader';
+import { Wrapper } from '../../components/Wrapper';
 
 export const LearningEducationalBlockPage: FC = () => {
   const { id } = useParams();
@@ -16,7 +17,11 @@ export const LearningEducationalBlockPage: FC = () => {
   return (
     <section className={classes.learningEducationalBlockPage}>
       <Container maxWidth={900}>
-        {isLoading && <Loader />}
+        {isLoading && (
+          <Wrapper height="70vh" align="center" justify="center">
+            <Loader />
+          </Wrapper>
+        )}
         {isSuccess && <LearningProcess educationalBlock={data} />}
       </Container>
     </section>

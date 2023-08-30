@@ -25,7 +25,11 @@ export const HomePage: FC = () => {
     <section className={classes.homePage}>
       <Container>
         {isError && <>Ошибка!</>}
-        {isLoading && <Loader />}
+        {isLoading && (
+          <Wrapper height="70vh" align="center" justify="center">
+            <Loader />
+          </Wrapper>
+        )}
         {isSuccess && <EducationalBlockList educationalBlocks={data} />}
       </Container>
     </section>
