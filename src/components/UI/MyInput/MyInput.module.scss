@@ -1,15 +1,24 @@
 @import '../../../variables.scss';
 
 .input {
-  padding: 15px 20px;
-  box-shadow: 0px 0px 5px $shadow-color;
-  border-radius: 7px;
+  width: 100%;
+  transition: all 0.3s;
 }
 
 .primary {
-  outline: 2px solid $secondary-color;
+  padding: 12px 0px;
+  border-bottom: 4px solid $text-secondary-color;
   // background-color: $bg-primary-color;
+  &:focus {
+    border-bottom: 6px solid $secondary-color;
+  }
 }
 .secondary {
+  padding: 15px 20px;
+  border-radius: 7px;
   background-color: $bg-primary-color;
+}
+
+.invalid {
+  outline: 2px solid red;
 }

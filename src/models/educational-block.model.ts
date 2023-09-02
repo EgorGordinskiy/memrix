@@ -1,9 +1,7 @@
 import { type IWord } from './word.model';
 
 export interface IEducationalBlock {
-  id: number;
+  id: number | string;
   name: string;
-  languageTerm: string;
-  languageTranslation: string;
   words: IWord[];
 }

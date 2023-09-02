@@ -31,6 +31,9 @@ export const HomePage: FC = () => {
           </Wrapper>
         )}
         {isSuccess && <EducationalBlockList educationalBlocks={data} />}
+        {/* <div className={classes.search}>
+          <SearchBar />
+        </div> */}
       </Container>
     </section>
   );

@@ -12,8 +12,8 @@ export const SearchBar: FC<SearchBarProps> = () => {
   return (
     <div className={classes.searchBar}>
       <AiOutlineSearch size={25} />
-      <MyInput placeholder="sets of flashcards" />
-      <button className={classes.btn}>search</button>
+      <input placeholder="название набора" />
+      {/* <button className={classes.btn}>search</button> */}
     </div>
   );
 };

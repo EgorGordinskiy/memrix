@@ -1,0 +1,30 @@
+@import '../../variables.scss';
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding-bottom: 80px;
+  .words {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .addCard {
+    padding: 15px;
+    background-color: $primary-color;
+    display: flex;
+    border-radius: 7px;
+    justify-content: center;
+    border-top: 5px solid $secondary-color;
+  }
+  .create {
+    position: fixed;
+    bottom: 15px;
+    right: 8px;
+  }
+  .name {
+    max-width: 550px;
+  }
+}
