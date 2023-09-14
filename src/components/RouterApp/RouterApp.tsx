@@ -8,20 +8,40 @@ import { LibraryPage } from '../../pages/LibraryPage';
 import { EducationalBlockFlashcardsPage } from '../../pages/EducationalBlockFlashcardsPage';
 import { LayoutEducationalBlock } from '../LayoutEducationalBlock';
 import { LearningEducationalBlockPage } from '../../pages/LearningEducationalBlockPage';
+import { TestingPage } from '../../pages/TestingPage';
+import { createBrowserRouter } from 'react-router-dom';
 
-export const RouterApp: FC = () => {
-  return (
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route path="/" index element={<HomePage />} />
-        <Route path="/create" element={<CreateEducationalBlockPage />} />
-        <Route path="/library" element={<LibraryPage />} />
-      </Route>
-      <Route path="/block/:id" element={<LayoutEducationalBlock />}>
-        <Route path="/block/:id" element={<EducationalBlockPage />} />
-        <Route path="/block/:id/flashcards" element={<EducationalBlockFlashcardsPage />} />
-        <Route path="/block/:id/learning" element={<LearningEducationalBlockPage />} />
-      </Route>
-    </Routes>
-  );
-};
+export const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Layout />,
+    children: [
+      {
+        path: '/',
+        element: <HomePage />
+      },
+      {
+        path: '/create',
+        element: <CreateEducationalBlockPage />
+      }
+    ]
+  },
+  {
+    path: '/block/:id',
+    element: <LayoutEducationalBlock />,
+    children: [
+      {
+        path: '/block/:id',
+        element: <EducationalBlockPage />
+      },
+      {
+        path: '/block/:id/flashcards',
+        element: <EducationalBlockFlashcardsPage />
+      },
+      {
+        path: '/block/:id/learning',
+        element: <LearningEducationalBlockPage />
+      }
+    ]
+  }
+]);

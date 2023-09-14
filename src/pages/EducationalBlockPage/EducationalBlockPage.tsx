@@ -36,7 +36,7 @@ export const EducationalBlockPage: FC = () => {
     {
       id: 1,
       name: t('ed-block_testing'),
-      path: '/',
+      path: `/block/${id}/testing`,
       icon: <PiChatsThin size={27} />
     }
   ];
